@@ -15,3 +15,21 @@ var rawInput = readLine()
 print("You said:")
 print(rawInput)
 
+guard let input = rawInput else
+{
+    //error
+    exit(9)
+}
+
+// Input
+
+var sum = 0
+
+
+
+
+//if input != nil && input == Int && input >= 1 && input <= 32500 {
+//
+//}
+
+// Output
