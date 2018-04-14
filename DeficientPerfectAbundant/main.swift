@@ -15,21 +15,43 @@ var rawInput = readLine()
 print("You said:")
 print(rawInput)
 
-guard let input = rawInput else
-{
-    //error
-    exit(9)
-}
 
 // Input
 
-var sum = 0
+var validInput = 0
 
+while 1 == 1 {
+    
+    // Make sure input is not nil
+    guard let givenInput = readLine() else
+    {
+        print("Please enter an integer between 1 and 32500")
+        continue
+    }
+    
+    // Make sure input is an integer
+    if givenInput != (Int) {
+        
+    }
+    
+    // Is the input between 1 and 32500
+    if givenInput < 1 || givenInput > 32500 {
+        print("Please enter an integer between 1 and 32500")
+        continue
+    }
+}
 
-
-
-//if input != nil && input == Int && input >= 1 && input <= 32500 {
-//
+//func calculateProperDivisors(n: Int) -> String {
+//    var result: String = ""
+//    for i in 1...n {
+//        guard n % i == 0  else {continue}
+//        result += i == 1 ? "1" : ", \(i)"
+//    }
+//    print(result)
+//    return result
 //}
 
+
+
 // Output
+
