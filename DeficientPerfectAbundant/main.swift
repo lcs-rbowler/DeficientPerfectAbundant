@@ -30,15 +30,20 @@ while 1 == 1 {
     }
     
     // Make sure input is an integer
-    if givenInput != (Int) {
-        
-    }
-    
-    // Is the input between 1 and 32500
-    if givenInput < 1 || givenInput > 32500 {
+    guard let givenInteger = Int(givenInput) else {
         print("Please enter an integer between 1 and 32500")
         continue
     }
+    
+    // Is the input between 1 and 32500
+    if givenInteger < 1 || givenInteger > 32500 {
+        print("Please enter an integer between 1 and 32500")
+        continue
+    }
+    
+    // If we get here, we know the integer is accurate
+    validInput = givenInteger
+    break
 }
 
 //func calculateProperDivisors(n: Int) -> String {
