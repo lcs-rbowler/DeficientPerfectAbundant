@@ -15,11 +15,11 @@ var rawInput = readLine()
 print("You said:")
 print(rawInput)
 
-
-// Input
+//======================================================================================================================\\
 
 var validInput = 0
 
+// Make sure input is acceptable
 while 1 == 1 {
     
     // Make sure input is not nil
@@ -46,17 +46,24 @@ while 1 == 1 {
     break
 }
 
-//func calculateProperDivisors(n: Int) -> String {
-//    var result: String = ""
-//    for i in 1...n {
-//        guard n % i == 0  else {continue}
-//        result += i == 1 ? "1" : ", \(i)"
-//    }
-//    print(result)
-//    return result
-//}
+
+var sum = 0
+
+// Find the proper divisors
+for i in 1...validInput - 1 {
+    
+    if validInput % i == 0 {
+        sum += i
+    }
+}
 
 
-
-// Output
+// Check is number is Deficient, Abundant, or Perfect
+if sum < validInput {
+    print("\(validInput) is a deficient number")
+} else if sum > validInput {
+    print("\(validInput) is an abundant number")
+} else if sum == validInput {
+    print("\(validInput) is a perfect number")
+}
 
