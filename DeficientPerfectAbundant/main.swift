@@ -11,9 +11,6 @@ import Foundation
 // Get the user input
 var rawInput = readLine()
 
-// Print out the input provided
-print("You said:")
-print(rawInput)
 
 //======================================================================================================================\\
 
